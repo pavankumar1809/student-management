@@ -12,6 +12,34 @@ body {
 	background-color: #D6E5FA;
 }
 
+.header {
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	margin: 10px 0;
+	background: #2F3A8F;
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
+	/* background-color: black; */
+	height: 80px;
+	margin-top: 0;
+	color: #fff;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav  a:hover {
+	color: turquoise;
+}
+
 a {
 	text-decoration: none;
 	color: #396EB0;
@@ -36,16 +64,19 @@ table {
 	background: #CEE5D0;
 	/* width: 60%; */
 }
-thead{
+
+thead {
 	border: none;
-	color : #2C272E;
+	color: #2C272E;
 	font-size: 1.2em;
 }
-td{
+
+td {
 	border: none;
 	padding: 5px;
 }
-tr{
+
+tr {
 	border-bottom: medium;
 	background: #fff;
 }
@@ -57,8 +88,16 @@ tr{
 			alert("Student has been Removed Successfully....");
 		}
 	</script>
+	
+	<div class="header">
+		<ul class="nav">
+			<li><a href='showStudent'>Home </a></li>
+			<span >Student Management</span>
+			<li><a href='logout'>LogOut</a></li>
 
-	<h1 align="center">Student Management</h1>
+		</ul>
+	</div>
+	<h1 align="center">Student List</h1>
 
 	<div align="center">
 		<form action="/student-management/addStudent">
@@ -66,7 +105,7 @@ tr{
 		</form>
 		<br>
 		<table border="1" cellspacing="20">
-			<thead >
+			<thead>
 				<tr style="background: #F3C892;">
 					<td>Id</td>
 					<td>Name</td>
@@ -82,7 +121,8 @@ tr{
 						<td>${stud.name}</td>
 						<td>${stud.mobile}</td>
 						<td>${stud.country}</td>
-						<td><a href="/student-management/more-info?userId=${stud.id}">More Info..</a></td>
+						<td><a href="/student-management/more-info?userId=${stud.id}">More
+								Info..</a></td>
 						<td><a
 							href="/student-management/updateStudent?userId=${stud.id}">Update</a></td>
 						<td><a

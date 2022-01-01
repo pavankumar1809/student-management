@@ -11,11 +11,40 @@ body {
 	background-color: #D6E5FA;
 }
 
+.header {
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	margin: 10px 0;
+	background: #2F3A8F;
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
+	/* background-color: black; */
+	height: 80px;
+	margin-top: 0;
+	color: #fff;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.nav  a:hover {
+	color: turquoise;
+}
+
 form {
 	position: relative;
 	width: 600px;
 	margin: auto;
-	background: #FEE3EC;
+	background: #DFD3C3;
 	padding: 15px;
 	border-radius: 7px;
 	box-shadow: 0 1px 5px rgb(138, 137, 137);
@@ -26,7 +55,7 @@ form input, select {
 	border: none;
 	border-radius: 5px;
 	padding: 4px;
-	background: #FEE3EC;
+	background: #DFD3C3;
 	font-size: 1.0em;
 	outline: none;
 	font-family: inherit;
@@ -57,6 +86,14 @@ label {
 </style>
 </head>
 <body>
+	<div class="header">
+		<ul class="nav">
+			<li><a href='showStudent'>Home </a></li>
+			<span>Student Management</span>
+			<li><a href='logout'>LogOut</a></li>
+
+		</ul>
+	</div>
 	<div align="center">
 		<h1 style="color: maroon;">Add Student</h1>
 		<form:form action="save-student" modelAttribute="student"
@@ -146,7 +183,8 @@ label {
 			<label style="width: 30px; color: black; font-size: 1.0em;">F</label>
 			<form:radiobutton style="width : 15px; " path="minorMarks"
 				value="Fail" />
-			<br><br>
+			<br>
+			<br>
 
 			<label>English :</label>
 			<label style="width: 50px; color: black; font-size: 1.0em;">A+</label>
@@ -163,8 +201,9 @@ label {
 			<form:radiobutton style="width : 15px; " path="eng" value="D" />
 			<label style="width: 30px; color: black; font-size: 1.0em;">F</label>
 			<form:radiobutton style="width : 15px; " path="eng" value="Fail" />
-			<br><br>
-			
+			<br>
+			<br>
+
 			<label>Mathematics :</label>
 			<label style="width: 50px; color: black; font-size: 1.0em;">A+</label>
 			<form:radiobutton style="width : 15px;" path="math" value="A+" />

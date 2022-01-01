@@ -1,5 +1,6 @@
 package com.studentManagement.config;
 
-public class SecurityWebApplicationInitializer {
-
-}
+import org.springframework.security.web.context.*;  
+public class SecurityWebApplicationInitializer  
+    extends AbstractSecurityWebApplicationInitializer {  
+}  
